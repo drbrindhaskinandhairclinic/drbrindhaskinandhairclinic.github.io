@@ -4,49 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description"
-        content="Gallery - Dr.Brindha Skin Clinic Trichy Treatment Results. Before & After Photos: Blue Laser, Acne Treatment, PRP, Carbon Peel, Melasma, Freckles, Tattoo Removal & More Success Stories">
+        content="News & Events - Dr.Brindha Skin &amp; Hair Clinic Trichy. Latest updates, community health camps, dermatology outreach events and clinic news.">
     <meta name="keywords"
-        content="skin treatment before after trichy, laser treatment results trichy, acne treatment photos, PRP therapy results, melasma treatment before after, dermatology gallery trichy, skin clinic photos">
+        content="Dr Brindha skin clinic news, dermatology news trichy, free medical camp trichy, skin clinic events trichy, community health trichy">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="robots" content="index, follow">
     <link rel="shortcut icon" href="./favicons/favicon-20x20.png" type="image/x-icon">
-    <link rel="canonical" href="https://www.drbrindhaskincare.com/gallery.html">
+    <link rel="canonical" href="https://www.drbrindhaskincare.com/news.html">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.drbrindhaskincare.com/gallery.html">
-    <meta property="og:title" content="Gallery - Treatment Results & Before After Photos | Dr.Brindha Trichy">
+    <meta property="og:url" content="https://www.drbrindhaskincare.com/news.html">
+    <meta property="og:title" content="News &amp; Events | Dr.Brindha Skin &amp; Hair Clinic Trichy">
     <meta property="og:description"
-        content="See real treatment results: Laser treatments, Acne care, PRP therapy, Melasma, Tattoo removal & more. Verified before-after photos">
+        content="Latest news, community health camps, and events from Dr.Brindha Skin &amp; Hair Clinic, Trichy.">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Treatment Gallery - Dr.Brindha Skin Clinic Trichy">
+    <meta name="twitter:title" content="News &amp; Events | Dr.Brindha Skin &amp; Hair Clinic Trichy">
+    <meta name="twitter:description"
+        content="Latest news, community health camps, and events from Dr.Brindha Skin &amp; Hair Clinic, Trichy.">
 
-    <title>Gallery - Treatment Results & Before After Photos | Dr.Brindha Skin Clinic Trichy</title>
+    <title>News &amp; Events | Dr.Brindha Skin &amp; Hair Clinic Trichy</title>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-R9LMP0S7RK"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-R9LMP0S7RK');
-    </script>
-    <!-- Schema.org JSON-LD -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ImageGallery",
-      "url": "https://www.drbrindhaskincare.com/gallery.html",
-      "name": "Treatment Gallery - Dr.Brindha Skin & Hair Clinic",
-      "description": "Before and after photos of various dermatology and cosmetic treatments performed at our clinic",
-      "about": {
-        "@type": "MedicalBusiness",
-        "name": "Dr.Brindha Skin & Hair Clinic"
-      }
-    }
     </script>
 
     <!-- Google Font -->
@@ -64,9 +52,114 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/clinic-integrations.css" type="text/css">
+    <style>
+        /* ---- News Listing Page styles ---- */
+        .news-section { padding: 70px 0; }
+        .news-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .news-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(63,187,192,0.18);
+        }
+        .news-card__img {
+            position: relative;
+            overflow: hidden;
+            height: 220px;
+        }
+        .news-card__img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        .news-card:hover .news-card__img img {
+            transform: scale(1.06);
+        }
+        .news-card__badge {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: #3fbbc0;
+            color: #fff;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        .news-card__body {
+            padding: 22px 24px 26px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .news-card__meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+        .news-card__meta span {
+            font-size: 12px;
+            color: #888;
+        }
+        .news-card__meta span i {
+            color: #3fbbc0;
+            margin-right: 4px;
+        }
+        .news-card__title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        .news-card__title a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .news-card__title a:hover { color: #3fbbc0; }
+        .news-card__excerpt {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.75;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+        .news-card__link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #3fbbc0;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: gap 0.2s;
+        }
+        .news-card__link:hover { gap: 10px; color: #3fbbc0; text-decoration: none; }
+        .news-card__link i { font-size: 12px; }
+        .news-empty {
+            text-align: center;
+            padding: 60px 20px;
+            color: #888;
+        }
+        .news-empty i { font-size: 48px; color: #d0f0f0; margin-bottom: 16px; display: block; }
+    </style>
 </head>
 
 <body>
+
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
@@ -136,8 +229,8 @@
                                 <li><a href="./index.html">Home</a></li>
                                 <li><a href="./about.html">About</a></li>
                                 <li><a href="./services.html">Services</a></li>
-                                <li class="active"><a href="./gallery.html">Gallery</a></li>
-                                <li><a href="./news.html">News</a></li>
+                                <li><a href="./gallery.html">Gallery</a></li>
+                                <li class="active"><a href="./news.html">News</a></li>
                             </ul>
                         </nav>
                         <div class="header__btn">
@@ -159,10 +252,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb__text">
-                        <h2>Our Gallery</h2>
+                        <h2>News &amp; Events</h2>
                         <div class="breadcrumb__links">
                             <a href="./index.html">Home</a>
-                            <span>Gallery</span>
+                            <span>News</span>
                         </div>
                     </div>
                 </div>
@@ -171,210 +264,53 @@
     </section>
     <!-- Breadcrumb Section End -->
 
-    <!-- Gallery Page Section Begin -->
-    <section class="gallery-full spad">
+    <!-- News Section Begin -->
+    <section class="news-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="section-title">
-                        <span>Our Work</span>
-                        <h2>Treatment Gallery</h2>
+                        <span>Latest Updates</span>
+                        <h2>News &amp; Events</h2>
                     </div>
                 </div>
             </div>
-            <!-- START -->
-            <div class="row gallery-full__grid">
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="gallery-full__item">
-                        <img src="img/gallery/LB.png" alt="Lacer Bluetoning">
-                        <a href="img/gallery/LB.png" class="image-popup gallery-full__overlay" title="Lacer Bluetoning">
-                            <i class="fa fa-search-plus"></i>
-                            <span>Lacer Bluetoning</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="gallery-full__item">
-                        <img src="img/gallery/melasma.png" alt="Melasma">
-                        <a href="img/gallery/melasma.png" class="image-popup gallery-full__overlay" title="Melasma">
-                            <i class="fa fa-search-plus"></i>
-                            <span>Melasma</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="gallery-full__item">
-                        <img src="img/gallery/freckles.png" alt="Freckles">
-                        <a href="img/gallery/freckles.png" class="image-popup gallery-full__overlay" title="Freckles">
-                            <i class="fa fa-search-plus"></i>
-                            <span>Freckles</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="gallery-full__item">
-                        <img src="img/gallery/TR.png" alt="Tatoo Removal">
-                        <a href="img/gallery/TR.png" class="image-popup gallery-full__overlay" title="Tatoo Removal">
-                            <i class="fa fa-search-plus"></i>
-                            <span>Tatoo Removal</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="gallery-full__item">
-                        <img src="img/gallery/irisEq.jpeg" alt="IRIS Bluetoning">
-                        <a href="img/gallery/irisEq.jpeg" class="image-popup gallery-full__overlay"
-                            title="IRIS Bluetoning">
-                            <i class="fa fa-search-plus"></i>
-                            <span>IRIS Bluetoning Equipment</span>
-                        </a>
-                    </div>
-                </div>
-                <!-- END -->
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="gallery-full__item">
-                        <img src="img/gallery/Acne.jpeg" alt="Acne Treatment">
-                        <a href="img/gallery/Acne.jpeg" class="image-popup gallery-full__overlay"
-                            title="Acne Treatment">
-                            <i class="fa fa-search-plus"></i>
-                            <span>Acne Treatment</span>
-                        </a>
-                    </div>
-                </div>
+            <div class="row">
 
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="gallery-full__item">
-                        <img src="img/gallery/blueLaser.jpeg" alt="Blue Laser Treatment">
-                        <a href="img/gallery/blueLaser.jpeg" class="image-popup gallery-full__overlay"
-                            title="Blue Laser Treatment">
-                            <i class="fa fa-search-plus"></i>
-                            <span>Blue Laser Treatment</span>
-                        </a>
+                <!-- News Card: Free Medical Camp March 2026 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="news-card">
+                        <div class="news-card__img">
+                            <img src="img/News/mar-2026/WhatsApp%20Image%202026-06-22%20at%201.25.42%20PM.jpeg" alt="Free Medical Camp - Dr.Brindha Skin Clinic, Trichy - March 2026" loading="lazy">
+                            <span class="news-card__badge">Community Health</span>
+                        </div>
+                        <div class="news-card__body">
+                            <div class="news-card__meta">
+                                <span><i class="fa fa-calendar"></i> 8th March 2026</span>
+                                <span><i class="fa fa-map-marker"></i> Highways Colony, Trichy</span>
+                            </div>
+                            <h3 class="news-card__title">
+                                <a href="./news-free-medical-camp-march-2026.html">
+                                    Free Medical Camp &ndash; 8th March 2026
+                                </a>
+                            </h3>
+                            <p class="news-card__excerpt">
+                                On International Women&rsquo;s Day, Dr.Brindha Skin &amp; Hair Clinic hosted a
+                                Free Medical Camp at Highways Colony, Trichy, offering complimentary skin
+                                &amp; hair consultations to the community.
+                            </p>
+                            <a href="./news-free-medical-camp-march-2026.html" class="news-card__link">
+                                Read More <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="gallery-full__item">
-                        <img src="img/gallery/bueLaser.jpeg" alt="Laser Treatment">
-                        <a href="img/gallery/bueLaser.jpeg" class="image-popup gallery-full__overlay"
-                            title="Laser Treatment">
-                            <i class="fa fa-search-plus"></i>
-                            <span>Laser Treatment</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="gallery-full__item">
-                        <img src="img/gallery/carbonPeel.jpeg" alt="Carbon Peel Treatment">
-                        <a href="img/gallery/carbonPeel.jpeg" class="image-popup gallery-full__overlay"
-                            title="Carbon Peel Treatment">
-                            <i class="fa fa-search-plus"></i>
-                            <span>Carbon Peel Treatment</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="gallery-full__item">
-                        <img src="img/gallery/carbonPeelLaserHairRemoval.jpeg" alt="Carbon Peel & Laser Hair Removal">
-                        <a href="img/gallery/carbonPeelLaserHairRemoval.jpeg" class="image-popup gallery-full__overlay"
-                            title="Carbon Peel & Laser Hair Removal">
-                            <i class="fa fa-search-plus"></i>
-                            <span>Carbon Peel & Hair Removal</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="gallery-full__item">
-                        <img src="img/gallery/facial.jpeg" alt="Facial Treatment">
-                        <a href="img/gallery/facial.jpeg" class="image-popup gallery-full__overlay"
-                            title="Facial Treatment">
-                            <i class="fa fa-search-plus"></i>
-                            <span>Facial Treatment</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="gallery-full__item">
-                        <img src="img/gallery/glow.jpeg" alt="Glow Treatment">
-                        <a href="img/gallery/glow.jpeg" class="image-popup gallery-full__overlay" title="Skin Glow">
-                            <i class="fa fa-search-plus"></i>
-                            <span>Skin Glow</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="gallery-full__item">
-                        <img src="img/gallery/laserTreatment.jpeg" alt="Laser Treatment">
-                        <a href="img/gallery/laserTreatment.jpeg" class="image-popup gallery-full__overlay"
-                            title="Laser Treatment">
-                            <i class="fa fa-search-plus"></i>
-                            <span>Laser Treatment</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="gallery-full__item">
-                        <img src="img/gallery/llip.jpeg" alt="Lip Treatment">
-                        <a href="img/gallery/llip.jpeg" class="image-popup gallery-full__overlay" title="Lip Treatment">
-                            <i class="fa fa-search-plus"></i>
-                            <span>Lip Treatment</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="gallery-full__item">
-                        <img src="img/gallery/mole.jpeg" alt="Skin Tag & Mole Removal">
-                        <a href="img/gallery/mole.jpeg" class="image-popup gallery-full__overlay"
-                            title="Skin Tag & Mole Removal">
-                            <i class="fa fa-search-plus"></i>
-                            <span>Mole Removal</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="gallery-full__item">
-                        <img src="img/gallery/oxygenoFacial.jpeg" alt="Oxygeneo Facial">
-                        <a href="img/gallery/oxygenoFacial.jpeg" class="image-popup gallery-full__overlay"
-                            title="Oxygeneo 3-in-1 Facial">
-                            <i class="fa fa-search-plus"></i>
-                            <span>Oxygeneo Facial</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="gallery-full__item">
-                        <img src="img/gallery/prp.jpeg" alt="PRP Therapy">
-                        <a href="img/gallery/prp.jpeg" class="image-popup gallery-full__overlay" title="PRP Therapy">
-                            <i class="fa fa-search-plus"></i>
-                            <span>PRP Therapy</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="gallery-full__item">
-                        <img src="img/gallery/skinWhitner.jpeg" alt="Skin Whitening">
-                        <a href="img/gallery/skinWhitner.jpeg" class="image-popup gallery-full__overlay"
-                            title="Skin Whitening">
-                            <i class="fa fa-search-plus"></i>
-                            <span>Skin Whitening</span>
-                        </a>
-                    </div>
-                </div>
+                <!-- End News Card -->
 
             </div>
         </div>
     </section>
-    <!-- Gallery Page Section End -->
+    <!-- News Section End -->
 
     <!-- Footer Section Begin -->
     <footer class="footer">
